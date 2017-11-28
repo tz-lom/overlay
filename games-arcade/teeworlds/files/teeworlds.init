@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright Oleg Kluchkin OS-Rostov.ru
+
+depend() {
+        need net
+}
+		
+start() {
+        ebegin "Starting TeeWorlds"
+        start-stop-daemon --background --start \
+	    --pidfile /var/run/teeworlds.pid -m \
+	    --chdir /usr/share/games/teeworlds \
+	    --exec /usr/games/bin/teeworlds_srv \
+	    -- -f /etc/teeworlds/server.conf
+        eend $?
+}
+
+stop() {
+        ebegin "Stoping TeeWorlds"
+        start-stop-daemon  --stop --pidfile /var/run/teeworlds.pid
+        eend $?
+}

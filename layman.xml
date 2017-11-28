@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>tz-lom</name>
+		<descriprion>Custom ebuilds of tz-lom</description>
+		<homepage>https://github.com/tz-lom/overlay</homepage>
+		<owner>
+			<email>vzorvat@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/tz-lom/overlay.git</source>
+	</repo>
+</repositories>
+
